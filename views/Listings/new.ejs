@@ -1,10 +1,10 @@
 <%- layout("/layouts/boilerplate.ejs") %>
-<div class="row">
+<div class="row mt-3">
 
   <div class="col-8 offset-2">
-    <br/>
     <h3>Create a New Listing</h3>
     <form method="POST" action="/listings">
+      
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>
        <input name="listing[title]" 
@@ -14,7 +14,7 @@
       </div>
        
       <div class="mb-3">
-        <label for="description" class="form-label">description</label>
+        <label for="description" class="form-label">Description</label>
         <textarea
           name="listing[description]"
           placeholder="enter description"
@@ -24,7 +24,7 @@
       </div>
       
       <div class="mb-3">
-        <label for="image" class="form-label">image</label>
+        <label for="image" class="form-label">Image</label>
         <input
           name="listing[image]"
           placeholder="enter image URL/Link"
@@ -34,12 +34,12 @@
       </div>
       <div class="row">
         <div class="mb-3 col-md-4">
-          <label for="price" class="form-label">price</label> 
+          <label for="price" class="form-label">Price</label> 
           <input name="listing[price]" placeholder="enter price" type="number" class="form-control"/>
         </div>
   
         <div class="mb-3 col-md-8">
-          <label for="title" class="form-label">country</label>
+          <label for="title" class="form-label">Country</label>
           <input name="listing[country]" placeholder="enter country" type="text" class="form-control"/>
         </div>
       </div>
@@ -47,7 +47,7 @@
       
 
       <div>
-        <label for="location" class="form-label">location</label>
+        <label for="location" class="form-label">Location</label>
         <input
           name="listing[location]"
           placeholder="enter location"
@@ -56,10 +56,9 @@
         />
       </div>  
 
-      <br /><br />
-      <button class="btn btn-dark add-btn">Add</button>
+       
+      <button class="btn btn-dark add-btn mt-3 mb-3">Add</button>
 
-      <br/> <br/>
     
     </form>
     

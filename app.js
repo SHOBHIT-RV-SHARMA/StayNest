@@ -7,7 +7,7 @@ const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate")
 const wrapAsync = require("./utilities/wrapAsync.js");
 const ExpressError = require("./utilities/ExpressError.js");
-const {listingSchema} = require("./Server_SIde_Validation.js");
+const {ListingSchema} = require("./Server_SIde_Validation.js");
 
 
 const MONGO_URL = "mongodb://127.0.0.1:27017/StayNest";
@@ -36,10 +36,11 @@ app.get("/", (req, res) => {
 });
 
 const validateListing = (req,res,next) => {
-  let {error} = listingSchema.validate(req.body);
+  let {error} = ListingSchema.validate(req.body);
 
   if(error){
-    throw new ExpressError(404 , error)
+    let errMsg = error.details.map((el) => el.message).join(","); // ask gpt what does this line do 
+    throw new ExpressError(404 , errMsg);
   }
 }
 

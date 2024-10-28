@@ -6,7 +6,7 @@ body{
 }
 
 .container{
-    flex : 1 ;
+    flex :1;
 }
 
 /* navbar */
@@ -26,10 +26,6 @@ body{
 
 /* footer */
 
-.footer{
-    width : 100%
-}
-
 .f-info-links a {
     text-decoration: none;
     color : #222222;
@@ -42,7 +38,7 @@ body{
 .f-info-links,
 .f-info-socials ,
 .f-info-brand{
-    width: 100%;
+    width: 100% !important;
     display : flex;
     align-items: center;
     justify-content: center;
@@ -122,7 +118,7 @@ body{
     display : flex ;
  }
 
- .show-card{
+.show-card{
     padding-left : 0 ;
     padding-right : 0 ;
- }
+ } 

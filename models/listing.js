@@ -28,7 +28,7 @@ const listingSchema = new Schema({
     ],    
 });
 
-listingSchema.post("findOneAndDelete", async (listing) => {
+listingSchema.post("findOneAndDelete", async (listing) => {   // ask  this  to chat gpt 
 
     if(listing){
         await Review.deleteMany({_id : {$in : listing.reviews}});

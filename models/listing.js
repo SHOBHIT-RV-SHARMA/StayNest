@@ -37,10 +37,10 @@ listingSchema.post("findOneAndDelete", async (listing) => {
 });
 
 /* 
-   it is  saying that whenever findOneAndDelete takes place
+   it means that whenever findOneAndDelete takes place
    in Listing collection then delete all the reviews 
    inside Review collection which are related or matched 
-   to the Listing id which is getting deleted 
+   to the Listing id which is going to  deleted 
 */
 
 const Listing = mongoose.model("Listing",listingSchema);

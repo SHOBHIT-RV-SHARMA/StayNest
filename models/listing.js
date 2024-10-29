@@ -28,13 +28,20 @@ const listingSchema = new Schema({
     ],    
 });
 
-listingSchema.post("findOneAndDelete", async (listing) => {   // ask  this  to chat gpt 
+listingSchema.post("findOneAndDelete", async (listing) => {    
 
     if(listing){
         await Review.deleteMany({_id : {$in : listing.reviews}});
     }
 
 });
+
+/* 
+   it is  saying that whenever findOneAndDelete 
+   in Listing collection then delete all the reviews 
+   inside Review collection which are related or matched 
+   to the Listing id which is getting deleted 
+*/
 
 const Listing = mongoose.model("Listing",listingSchema);
 module.exports = Listing;

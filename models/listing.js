@@ -37,7 +37,7 @@ listingSchema.post("findOneAndDelete", async (listing) => {
 });
 
 /* 
-   it is  saying that whenever findOneAndDelete 
+   it is  saying that whenever findOneAndDelete takes place
    in Listing collection then delete all the reviews 
    inside Review collection which are related or matched 
    to the Listing id which is getting deleted 
